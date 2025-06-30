@@ -45,14 +45,14 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+2519231962",
       description: "Mon-Fri from 8am to 6pm",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "123 Business Ave, Suite 100",
-      description: "San Francisco, CA 94105",
+      details: "OICT Solutions",
+      description: "Jemo Mebratail, OSAC BUSiNESS CENETER",
     },
     {
       icon: Clock,
