@@ -3,28 +3,28 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Galasa Jarso",
     role: "Tenant",
     content:
       "RentEase made finding my perfect apartment so easy. The platform is user-friendly and all properties are exactly as described.",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxz7qJ9pU6Xj2EJKaRDVz-9Bd0xh2LnMklGw&s",
   },
   {
-    name: "Michael Chen",
+    name: "Tofik Ahmed",
     role: "Landlord",
     content:
       "As a property owner, RentEase has streamlined my rental process. I can manage all my properties from one dashboard.",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdmvTNzX2AmCX2rSRQBa4KkZsU2GgiWh8sA&s",
   },
   {
-    name: "Emily Davis",
+    name: "Bonsa Haji",
     role: "Property Manager",
     content:
       "The management tools are fantastic. I can handle maintenance requests, payments, and tenant communication all in one place.",
     rating: 5,
-    avatar: "/placeholder.svg?height=60&width=60",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9jZ2FzVxFkw-yBn7FM0dOJRzLD26gS5Ro1w&s",
   },
 ]
 
