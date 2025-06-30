@@ -1,74 +1,130 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Search, MapPin, Home } from "lucide-react"
+
+"use client";
+
+import { useState } from "react";
+import { Search, MapPin, Home } from "lucide-react"; // DollarSign removed
+import { Button } from "@/components/ui/button";
+import clsx from "clsx";
 
 export function Hero() {
-  return (
-    <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Find Your Perfect
-            <span className="text-blue-600 block">Rental Home</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Discover thousands of verified rental properties. Whether you're a tenant looking for a home or a landlord
-            managing properties, we've got you covered.
-          </p>
+  const [searchType, setSearchType] = useState("rent");
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/properties">
-              <Button size="lg" className="w-full sm:w-auto">
-                <Search className="mr-2 h-5 w-5" />
-                Browse Properties
-              </Button>
-            </Link>
-            <Link href="/auth/login">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-                <Home className="mr-2 h-5 w-5" />
-                List Your Property
-              </Button>
-            </Link>
+  return (
+    <section className="relative h-screen flex flex-col justify-center items-center text-center">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2070&auto=format&fit=crop"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="https://cdn.pixabay.com/video/2021/10/12/91744-636709154_tiny.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Subtle Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10" />
+
+      {/* Main Content */}
+      <div className="relative z-20 flex flex-col items-center px-4">
+        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-md">
+          Find Your House.
+        </h1>
+        <p className="mt-4 text-xl text-gray-200 max-w-2xl drop-shadow-md">
+          Discover exceptional rental properties tailored to your life.
+        </p>
+
+        <div className="mt-12 w-full max-w-4xl">
+          <div className="flex justify-center gap-2 mb-4">
+            <button
+              onClick={() => setSearchType("rent")}
+              className={clsx(
+                "py-2 px-8 rounded-full text-lg font-semibold transition-all duration-300",
+                {
+                  "bg-white text-gray-900 shadow-lg": searchType === "rent",
+                  "bg-white/20 text-white hover:bg-white/30": searchType !== "rent",
+                }
+              )}
+            >
+              For Rent
+            </button>
+            <button
+              onClick={() => setSearchType("sale")}
+              className={clsx(
+                "py-2 px-8 rounded-full text-lg font-semibold transition-all duration-300",
+                {
+                  "bg-white text-gray-900 shadow-lg": searchType === "sale",
+                  "bg-white/20 text-white hover:bg-white/30": searchType !== "sale",
+                }
+              )}
+            >
+              For Sale
+            </button>
           </div>
 
-          {/* Search Bar */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <div className="relative">
-                  <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Enter location..."
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-              </div>
-              <div className="flex-1">
-                <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
-                  <option>Property Type</option>
-                  <option>Apartment</option>
-                  <option>House</option>
-                  <option>Condo</option>
-                  <option>Studio</option>
-                </select>
-              </div>
-              <div className="flex-1">
-                <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
-                  <option>Price Range</option>
-                  <option>$500 - $1000</option>
-                  <option>$1000 - $2000</option>
-                  <option>$2000 - $3000</option>
-                  <option>$3000+</option>
-                </select>
-              </div>
-              <Button size="lg" className="md:w-auto">
-                <Search className="h-5 w-5" />
-              </Button>
+          <div className="flex flex-col md:flex-row items-center gap-4 bg-white/20 backdrop-blur-lg p-3 rounded-xl md:rounded-full border border-white/30 shadow-2xl">
+            <div className="w-full md:flex-1 relative flex items-center">
+              <MapPin className="absolute left-4 h-6 w-6 text-white/70" />
+              <input
+                type="text"
+                placeholder="Enter city or neighborhood..."
+                className="w-full bg-transparent pl-12 pr-4 py-3 text-white placeholder:text-gray-300 focus:outline-none"
+              />
             </div>
+            
+            <div className="hidden md:block w-px h-8 bg-white/30" />
+
+            <div className="w-full md:w-auto relative flex items-center cursor-pointer group">
+              <Home className="absolute left-4 h-6 w-6 text-white/70" />
+              <select
+                className="w-full bg-transparent pl-12 pr-8 py-3 text-white appearance-none focus:outline-none cursor-pointer"
+              >
+                <option className="text-black">All Types</option>
+                <option className="text-black">Apartment</option>
+                <option className="text-black">House</option>
+                <option className="text-black">Condo</option>
+              </select>
+            </div>
+
+            <div className="hidden md:block w-px h-8 bg-white/30" />
+
+            {/* --- BIRR SIGN IMPLEMENTED HERE --- */}
+            <div className="w-full md:w-auto relative flex items-center cursor-pointer group">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg font-semibold text-white/70 pointer-events-none">
+                Br
+              </span>
+              <select
+                className="w-full bg-transparent pl-12 pr-8 py-3 text-white appearance-none focus:outline-none cursor-pointer"
+              >
+                <option className="text-black">Any Price</option>
+                {searchType === 'rent' ? (
+                  <>
+                    <option className="text-black">5,000 - 15,000 Br</option>
+                    <option className="text-black">15,000 - 30,000 Br</option>
+                    <option className="text-black">30,000+ Br</option>
+                  </>
+                ) : (
+                  <>
+                    <option className="text-black">1M - 5M Br</option>
+                    <option className="text-black">5M - 10M Br</option>
+                    <option className="text-black">10M+ Br</option>
+                  </>
+                )}
+              </select>
+            </div>
+
+            <Button
+              size="lg"
+              className="w-full md:w-auto md:h-14 md:px-8 bg-blue-600 hover:bg-blue-700 rounded-lg md:rounded-full text-lg font-semibold transition-all duration-300"
+            >
+              <Search className="mr-2 h-5 w-5 md:hidden" />
+              Search
+            </Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
