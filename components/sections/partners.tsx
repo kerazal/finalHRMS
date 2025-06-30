@@ -24,19 +24,10 @@ const partners = [
   },
   {
     name: "Prime Properties",
-    logoUrl: "https://primeproperties.com.ph/wp-content/uploads/2020/07/Prime-Properties-Logo-1.png",
+    logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmuC8nOewh03e0ftcXWVBVw6XbBVA47wmUJg&s",
     websiteUrl: "#",
   },
-  {
-    name: "Skyline Realty",
-    logoUrl: "https://skyline-realty.com/wp-content/uploads/2022/01/skyline-realty-logo-header.png",
-    websiteUrl: "#",
-  },
-  {
-    name: "Apex Homes",
-    logoUrl: "https://apexhomes.com/wp-content/uploads/2021/05/apex-homes-logo.png",
-    websiteUrl: "#",
-  },
+
 ];
 
 export function PartnersSection() {
