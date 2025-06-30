@@ -39,7 +39,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      details: "support@rentease.com",
+      details: "kerazal71@gmail.com",
       description: "Send us an email anytime",
     },
     {
