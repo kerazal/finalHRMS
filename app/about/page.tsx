@@ -36,19 +36,19 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Keyradin Aman",
       role: "CEO & Founder",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Former real estate executive with 15+ years of experience in property management.",
     },
     {
-      name: "Michael Chen",
+      name: "Kubsa melka",
       role: "CTO",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Tech veteran who previously led engineering teams at major proptech companies.",
     },
     {
-      name: "Emily Rodriguez",
+      name: "Haile Abebe",
       role: "Head of Operations",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Operations expert focused on streamlining processes and improving user experience.",
