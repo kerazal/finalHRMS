@@ -1,0 +1,16 @@
+# Copy this file to .env.local and fill in your actual values
+
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
+
+# Chapa Payment Gateway
+CHAPA_SECRET_KEY=your_chapa_secret_key_here
+CHAPA_TEST_SECRET=your_chapa_test_secret_here
+
+# Application Configuration
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# For Vercel deployment, also set:
+# VERCEL_URL=https://your-app.vercel.app 
