@@ -38,19 +38,19 @@ export default function AboutPage() {
     {
       name: "Keyradin Aman",
       role: "CEO & Founder",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://png.pngtree.com/png-clipart/20190520/original/pngtree-business-male-icon-vector-png-image_4187852.jpg",
       bio: "Former real estate executive with 15+ years of experience in property management.",
     },
     {
       name: "Kubsa melka",
       role: "CTO",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Wh3LRkPMd9u9CqXwooIvIfY9LGmQVG-JL9gaTcbLtYn4K-5kHgusq3c9bx8tFOFRyfI&usqp=CAU",
       bio: "Tech veteran who previously led engineering teams at major proptech companies.",
     },
     {
       name: "Haile Abebe",
       role: "Head of Operations",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw_JmAXuH2Myq0ah2g_5ioG6Ku7aR02-mcvimzwFXuD25p2bjx7zhaL34oJ7H9khuFx50&usqp=CAU",
       bio: "Operations expert focused on streamlining processes and improving user experience.",
     },
   ]
